@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Form</title>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>  
+	    <script type="text/javascript">
+		function sendEmail() {
+			Email.send({
+				Host: "smtp.outlook.com",
+				Username : "bot_mattia@outlook.it",
+				Password : "jokcu2-bykgev-hUqxit",
+				To : 'mattiamonti2001@gmail.com',
+				From : "bot_mattia@outlook.it",
+				Subject : "prova javascript",
+				Body : "prova javascript",
+			})
+			.then(function(message){
+				alert("mail sent successfully")
+			});
+		}
+	</script>
+    </head>
+
+    <body>
+        <h1>Form Gestione tramite Mail</h1>
+        <form method="post">
+            <input type="button" value="Send Email" onclick="sendEmail()"/>
+        </form> 
+    </body>
+</html>
